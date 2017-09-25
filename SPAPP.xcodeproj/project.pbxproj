@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		42EC53571F79271C006CCB73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53561F79271C006CCB73 /* AppDelegate.swift */; };
-		42EC53591F79271C006CCB73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53581F79271C006CCB73 /* ViewController.swift */; };
 		42EC535C1F79271C006CCB73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EC535A1F79271C006CCB73 /* Main.storyboard */; };
 		42EC535E1F79271C006CCB73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EC535D1F79271C006CCB73 /* Assets.xcassets */; };
 		42EC53611F79271C006CCB73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EC535F1F79271C006CCB73 /* LaunchScreen.storyboard */; };
 		42EC536C1F79271C006CCB73 /* SPAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC536B1F79271C006CCB73 /* SPAPPTests.swift */; };
 		42EC53771F79271C006CCB73 /* SPAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53761F79271C006CCB73 /* SPAPPUITests.swift */; };
+		42EC53851F792E23006CCB73 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53841F792E23006CCB73 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		42EC53531F79271C006CCB73 /* SPAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EC53561F79271C006CCB73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42EC53581F79271C006CCB73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42EC535B1F79271C006CCB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42EC535D1F79271C006CCB73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42EC53601F79271C006CCB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		42EC53721F79271C006CCB73 /* SPAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EC53761F79271C006CCB73 /* SPAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAPPUITests.swift; sourceTree = "<group>"; };
 		42EC53781F79271C006CCB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42EC53841F792E23006CCB73 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				42EC53561F79271C006CCB73 /* AppDelegate.swift */,
-				42EC53581F79271C006CCB73 /* ViewController.swift */,
+				42EC53841F792E23006CCB73 /* QuizViewController.swift */,
 				42EC535A1F79271C006CCB73 /* Main.storyboard */,
 				42EC535D1F79271C006CCB73 /* Assets.xcassets */,
 				42EC535F1F79271C006CCB73 /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42EC53591F79271C006CCB73 /* ViewController.swift in Sources */,
+				42EC53851F792E23006CCB73 /* QuizViewController.swift in Sources */,
 				42EC53571F79271C006CCB73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
