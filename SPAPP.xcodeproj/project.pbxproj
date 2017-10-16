@@ -14,6 +14,7 @@
 		42EC536C1F79271C006CCB73 /* SPAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC536B1F79271C006CCB73 /* SPAPPTests.swift */; };
 		42EC53771F79271C006CCB73 /* SPAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53761F79271C006CCB73 /* SPAPPUITests.swift */; };
 		42EC53851F792E23006CCB73 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC53841F792E23006CCB73 /* QuizViewController.swift */; };
+		7B802DF21F94DF1400DCF463 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B802DF11F94DF1400DCF463 /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		42EC53761F79271C006CCB73 /* SPAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAPPUITests.swift; sourceTree = "<group>"; };
 		42EC53781F79271C006CCB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42EC53841F792E23006CCB73 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		7B802DF11F94DF1400DCF463 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				42EC535D1F79271C006CCB73 /* Assets.xcassets */,
 				42EC535F1F79271C006CCB73 /* LaunchScreen.storyboard */,
 				42EC53621F79271C006CCB73 /* Info.plist */,
+				7B802DF11F94DF1400DCF463 /* Questions.swift */,
 			);
 			path = SPAPP;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B802DF21F94DF1400DCF463 /* Questions.swift in Sources */,
 				42EC53851F792E23006CCB73 /* QuizViewController.swift in Sources */,
 				42EC53571F79271C006CCB73 /* AppDelegate.swift in Sources */,
 			);
@@ -514,6 +518,7 @@
 				42EC537D1F79271C006CCB73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42EC537E1F79271C006CCB73 /* Build configuration list for PBXNativeTarget "SPAPPTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				42EC53801F79271C006CCB73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42EC53811F79271C006CCB73 /* Build configuration list for PBXNativeTarget "SPAPPUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				42EC53831F79271C006CCB73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
