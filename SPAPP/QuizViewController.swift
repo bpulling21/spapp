@@ -16,12 +16,13 @@ class QuizViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var questionLabel: UILabel!
     //show the question
     
-    var questionArray = ["asdf", "ghjk", "lzxc","hi there", "school", "code"]
+    var tableviewArray:Array<String> = []
     
-    
+    // display the questions and add all the answers into the array
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayQuestion()
         //tableView.delegate = self
         tableView.dataSource = self
     }
@@ -34,25 +35,41 @@ class QuizViewController: UIViewController, UITableViewDataSource {
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return questionArray.count
+        return tableviewArray.count
     }
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
         
-        cell.textLabel?.text = questionArray[indexPath.row]
-    
-        
-        
-        
-        
-        
-        
+        cell.textLabel?.text = tableviewArray[indexPath.row]
         
         return cell
     }
+    func displayQuestion () {
+        var quizQuestion = allQuestions[1]
+        questionLabel.text = quizQuestion.question
+        tableviewArray.append(quizQuestion.choice1)
+        tableviewArray.append(quizQuestion.choice2)
+        tableviewArray.append(quizQuestion.choice3)
         
+        x
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
         
         // Do any additional setup after loading the view.
     

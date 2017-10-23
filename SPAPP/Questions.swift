@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Questions: NSObject {
+//class Questions: NSObject {
     struct spappQuestion {
         let question: String
         let choice1: String
@@ -29,7 +29,7 @@ class Questions: NSObject {
         choice1: "Reading, Studying, Tutoring Unit",
         choice2: "Those are the period names",
         choice3: "They made it up",
-        correctChoice: "Those are the period blocks")
+        correctChoice: "Those are the period names")
     
     let question3 = spappQuestion(
         question: "How many middle and upper school math teachers are there?",
@@ -39,9 +39,12 @@ class Questions: NSObject {
         correctChoice: "14")
     
     let question4 = spappQuestion(
-        question: "What is Spence's address?",
+        question: "What is Spence's proper address?",
         choice1: "21 East 91st Street",
         choice2: "22 East 91st Street",
         choice3: "20 East 91st Street",
         correctChoice: "22 East 91st Street")
-}
+    
+    var allQuestions: [spappQuestion] = [question1, question2, question3,question4]
+//}
+
