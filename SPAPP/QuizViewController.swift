@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizViewController: UIViewController, UITableViewDataSource {
+class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var answerTableView: UITableView!
@@ -25,6 +25,7 @@ class QuizViewController: UIViewController, UITableViewDataSource {
         displayQuestion()
         //tableView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
     }
         // MARK: - Table view data source
     
@@ -46,30 +47,23 @@ class QuizViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt
+        indexPath: IndexPath){
+        var selectedCell = tableviewArray[indexPath.row]
+        
+        
+    }
+    
+    
+    
     func displayQuestion () {
         var quizQuestion = allQuestions[1]
         questionLabel.text = quizQuestion.question
         tableviewArray.append(quizQuestion.choice1)
         tableviewArray.append(quizQuestion.choice2)
         tableviewArray.append(quizQuestion.choice3)
-        
-        x
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
+
         
         // Do any additional setup after loading the view.
     
