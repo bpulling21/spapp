@@ -28,7 +28,7 @@ import UIKit
         question: "What does RSTU stand for?",
         choice1: "Reading, Studying, Tutoring Unit",
         choice2: "Those are the period names",
-        choice3: "They made it up",
+        choice3: "Ms.Meisner liked the sound of it",
         correctChoice: "Those are the period names")
     
     let question3 = spappQuestion(
