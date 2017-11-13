@@ -2,8 +2,8 @@
 //  QuizViewController.swift
 //  SPAPP
 //
-//  Created by Brooke Li Shan on 25/9/2017.
-//  Copyright © 2017 Brooke Pulling. All rights reserved.
+//  Created by Brooke Li Shan and Skyler Li An on 25/9/2017.
+//  Copyright © 2017 Brooke and Skyler Pulling. All rights reserved.
 //
 
 import UIKit
@@ -39,14 +39,14 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return tableviewArray.count
     }
     
-    
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
         
         cell.textLabel?.text = tableviewArray[indexPath.row]
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
         var selectedChoice = tableviewArray[indexPath.row]
@@ -67,8 +67,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
-    
     func displayQuestion () {
         var quizQuestion = allQuestions[2]
         questionLabel.text = quizQuestion.question
@@ -77,14 +75,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableviewArray.append(quizQuestion.choice3)
     }
 
-        
-        // Do any additional setup after loading the view.
-    
-
-    // add table view methods
-    
-
-    /*
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
