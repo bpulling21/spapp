@@ -9,6 +9,7 @@
 import UIKit
 
 //class Questions: NSObject {
+//level 2
     struct spappQuestion {
         let question: String
         let choice1: String
@@ -73,7 +74,42 @@ let question8 = spappQuestion(
     choice3: "Mr.Harris",
     correctChoice: "Gwyneth Paltrow")
 
+//level 3
+let question9 = spappQuestion(
+    question: "What percent of students at Spence are female?",
+    choice1: "50%"
+    choice2,: "80%",
+    choice3: "70%",
+    correctChoice: "80%")
+
+let question10 = spappQuestion(
+    question: "What was the first Spence address?",
+    choice1: "6 West 48th Street",
+    choice2: "52 East 62nd Street",
+    choice3: "22 East 91st Street",
+    correctChoice: "6 West 48th Street")
+
+let question11 = spappQuestion(
+    question: "Does Spence make their own muffins and pastries?",
+    choice1: "Yes",
+    choice2: "No",
+    choice3: "Yes only for muffins",
+    correctChoice: "Yes only for muffins")
+
+let question12 = spappQuestion(
+    question: "How many times do you have to be late to school to receive a detention?",
+    choice1: "3",
+    choice2: "5",
+    choice3: "10",
+    correctChoice: "5")
+
+let question13 = spappQuestion(
+    question: <#T##String#>,
+    choice1: <#T##String#>,
+    choice2: <#T##String#>,
+    choice3: <#T##String#>, correctChoice: <#T##String#>)
+
     
-    var allQuestions: [spappQuestion] = [question1, question2, question3,question4, question5, question6, question7, question8]
+    var allQuestions: [spappQuestion] = [question1, question2, question3,question4, question5, question6, question7, question8, question9, question10, question11, question12]
 //}
 
