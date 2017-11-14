@@ -49,26 +49,27 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
-        var selectedChoice = tableviewArray[indexPath.row]
-        var quizQuestion = allQuestions[2]
+        let selectedChoice = tableviewArray[indexPath.row]
+        let quizQuestion = allQuestions[2]
         if selectedChoice == quizQuestion.correctChoice{
             print("Great Choice. You got it right!")
+            
             let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
-            var okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
             
         } else {
             print("Oops! You got it wrong!")
             let alertController = UIAlertController(title: "Bad Choice", message: "Oops!", preferredStyle: UIAlertControllerStyle.alert)
-            var okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }
     }
     
     func displayQuestion () {
-        var quizQuestion = allQuestions[2]
+        let quizQuestion = allQuestions[2]
         questionLabel.text = quizQuestion.question
         tableviewArray.append(quizQuestion.choice1)
         tableviewArray.append(quizQuestion.choice2)
