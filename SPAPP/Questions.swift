@@ -46,70 +46,93 @@ import UIKit
         choice3: "20 East 91st Street",
         correctChoice: "22 East 91st Street")
 
-let question5 = spappQuestion(
-    question: "Where is the Clara Spence tree?",
-    choice1: "The Osbourne Wing",
-    choice2: "Central Park",
-    choice3: "The Townhouse garden",
-    correctChoice: "Central Park")
+    let question5 = spappQuestion(
+        question: "Where is the Clara Spence tree?",
+        choice1: "The Osbourne Wing",
+        choice2: "Central Park",
+        choice3: "The Townhouse garden",
+        correctChoice: "Central Park")
 
-let question6 = spappQuestion(
-    question: "What sudject does Ms. Krauthamer teach?",
-    choice1: "English",
-    choice2: "French",
-    choice3: "Health",
-    correctChoice: "French")
+    let question6 = spappQuestion(
+        question: "What sudject does Ms. Krauthamer teach?",
+        choice1: "English",
+        choice2: "French",
+        choice3: "Health",
+        correctChoice: "French")
 
-let question7 = spappQuestion(
-    question: "Which grade is allowed in the elevatorn during the school day?",
-    choice1: "Freshman and 8th graders",
-    choice2: "Seniors only",
-    choice3: "Anyone",
-    correctChoice: "Seniors only")
+    let question7 = spappQuestion(
+        question: "Which grade is allowed in the elevatorn during the school day?",
+        choice1: "Freshman and 8th graders",
+        choice2: "Seniors only",
+        choice3: "Anyone",
+        correctChoice: "Seniors only")
 
-let question8 = spappQuestion(
-    question: "Challenge: Which spence alum/teacher has won an oscar",
-    choice1: "Gwyneth Paltrow",
-    choice2: "Kerry Washington",
-    choice3: "Mr.Harris",
-    correctChoice: "Gwyneth Paltrow")
+    let question8 = spappQuestion(
+        question: "Challenge: Which spence alum/teacher has won an oscar",
+        choice1: "Gwyneth Paltrow",
+        choice2: "Kerry Washington",
+        choice3: "Mr.Harris",
+        correctChoice: "Gwyneth Paltrow")
 
-//level 3
-let question9 = spappQuestion(
-    question: "What percent of students at Spence are female?",
-    choice1: "50%"
-    choice2,: "80%",
-    choice3: "70%",
-    correctChoice: "80%")
+    //level 3
+    let question9 = spappQuestion(
+        question: "What percent of teachers at Spence are female?",
+        choice1: "50%",
+        choice2: "80%",
+        choice3: "70%",
+        correctChoice: "80%")
 
-let question10 = spappQuestion(
-    question: "What was the first Spence address?",
-    choice1: "6 West 48th Street",
-    choice2: "52 East 62nd Street",
-    choice3: "22 East 91st Street",
-    correctChoice: "6 West 48th Street")
+    let question10 = spappQuestion(
+        question: "What was the first Spence address?",
+        choice1: "6 West 48th Street",
+        choice2: "52 East 62nd Street",
+        choice3: "22 East 91st Street",
+        correctChoice: "6 West 48th Street")
 
-let question11 = spappQuestion(
-    question: "Does Spence make their own muffins and pastries?",
-    choice1: "Yes",
-    choice2: "No",
-    choice3: "Yes only for muffins",
-    correctChoice: "Yes only for muffins")
+    let question11 = spappQuestion(
+        question: "Does Spence make their own muffins and pastries?",
+        choice1: "Yes",
+        choice2: "No",
+        choice3: "Yes only for muffins",
+        correctChoice: "Yes only for muffins")
 
-let question12 = spappQuestion(
-    question: "How many times do you have to be late to school to receive a detention?",
-    choice1: "3",
-    choice2: "5",
-    choice3: "10",
-    correctChoice: "5")
+    let question12 = spappQuestion(
+        question: "How many times do you have to be late to school to receive a detention?",
+        choice1: "3",
+        choice2: "5",
+        choice3: "10",
+        correctChoice: "5")
 
-let question13 = spappQuestion(
-    question: <#T##String#>,
-    choice1: <#T##String#>,
-    choice2: <#T##String#>,
-    choice3: <#T##String#>, correctChoice: <#T##String#>)
+    let question13 = spappQuestion(
+        question: "Which teacher in Spence teached the most classes?",
+        choice1: "Mr, Bailey",
+        choice2: "Ms. Saltzman",
+        choice3: "It's a tie between many teachers",
+        correctChoice: "Ms. Saltzman")
 
-    
-    var allQuestions: [spappQuestion] = [question1, question2, question3,question4, question5, question6, question7, question8, question9, question10, question11, question12]
-//}
+    let question14 = spappQuestion(
+        question: "What is the largest number of frees a senior currently has?",
+        choice1: "9",
+        choice2: "8",
+        choice3: "10",
+        correctChoice: "9")
+
+    let question15 = spappQuestion(
+        question: "What is the most used classroom in Spence?",
+        choice1: "1003",
+        choice2: "704",
+        choice3: "231",
+        correctChoice: "1003")
+
+    let question16 = spappQuestion(
+        question: "Which period has the most teachers free?",
+        choice1: "Mon, 1st",
+        choice2: "Thu, 2nd",
+        choice3: "Fri, Last",
+        correctChoice: "Mon, 1st")
+
+    var levelTwoQuestions: [spappQuestion] = [question1, question2, question3,question4, question5, question6, question7, question8]
+
+    var levelThreeQuestions: [spappQuestion] = [question9, question10, question11,question12, question13, question14, question15, question16]
+
 

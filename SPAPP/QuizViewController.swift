@@ -50,7 +50,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
         let selectedChoice = tableviewArray[indexPath.row]
-        let quizQuestion = allQuestions[2]
+        let quizQuestion = levelThreeQuestions[7]
         if selectedChoice == quizQuestion.correctChoice{
             print("Great Choice. You got it right!")
             
@@ -69,7 +69,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func displayQuestion () {
-        let quizQuestion = allQuestions[2]
+        let quizQuestion = levelThreeQuestions[7]
         questionLabel.text = quizQuestion.question
         tableviewArray.append(quizQuestion.choice1)
         tableviewArray.append(quizQuestion.choice2)
