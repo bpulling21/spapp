@@ -17,7 +17,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //show the question
     
     var tableviewArray:Array<String> = []
-    
+    var passedQuestionArray:Array<spappQuestion> = []
     // display the questions and add all the answers into the array
     
     override func viewDidLoad() {
@@ -27,6 +27,19 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    
+    
+    func displayQuestion () {
+        let quizQuestion = levelThreeQuestions[7]
+        questionLabel.text = quizQuestion.question
+        tableviewArray.append(quizQuestion.choice1)
+        tableviewArray.append(quizQuestion.choice2)
+        tableviewArray.append(quizQuestion.choice3)
+    }
+    
+    
+    
         // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,13 +81,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    func displayQuestion () {
-        let quizQuestion = levelThreeQuestions[7]
-        questionLabel.text = quizQuestion.question
-        tableviewArray.append(quizQuestion.choice1)
-        tableviewArray.append(quizQuestion.choice2)
-        tableviewArray.append(quizQuestion.choice3)
-    }
+
 
         /*
     // MARK: - Navigation

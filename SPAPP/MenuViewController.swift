@@ -32,14 +32,21 @@ class MenuViewController: UIViewController {
     }
     
 
-    /*
+  
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segue_to_level_two"{
+            let destination = segue.destination as! QuizViewController
+            destination.passedQuestionArray = levelTwoQuestions
+        }
+   
+        if segue.identifier == "segue_to_level_three"{
+            let destination = segue.destination as! QuizViewController
+            destination.passedQuestionArray = levelThreeQuestions
     }
-    */
+   
 
+}
 }
