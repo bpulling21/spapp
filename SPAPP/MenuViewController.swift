@@ -2,8 +2,8 @@
 //  MenuViewController.swift
 //  SPAPP
 //
-//  Created by Brooke Pulling on 11/21/17.
-//  Copyright © 2017 Brooke Pulling. All rights reserved.
+//  Created by Brooke and Skyler Pulling on 11/21/17.
+//  Copyright © 2017 Brooke and Skyler Pulling. All rights reserved.
 //
 
 import UIKit

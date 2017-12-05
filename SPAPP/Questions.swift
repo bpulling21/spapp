@@ -68,10 +68,10 @@ import UIKit
         correctChoice: "Seniors only")
 
     let question8 = spappQuestion(
-        question: "Challenge: Which spence alum/teacher has won an oscar",
+        question: "Challenge: Which Spence alum/teacher has won an oscar",
         choice1: "Gwyneth Paltrow",
         choice2: "Kerry Washington",
-        choice3: "Mr.Harris",
+        choice3: "Mr. Harris",
         correctChoice: "Gwyneth Paltrow")
 
     //level 3
