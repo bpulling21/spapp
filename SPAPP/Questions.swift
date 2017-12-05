@@ -104,7 +104,7 @@ import UIKit
         correctChoice: "5")
 
     let question13 = spappQuestion(
-        question: "Which teacher in Spence teached the most classes?",
+        question: "Which teacher in Spence has taught the most classes?",
         choice1: "Mr, Bailey",
         choice2: "Ms. Saltzman",
         choice3: "It's a tie between many teachers",
@@ -131,7 +131,71 @@ import UIKit
         choice3: "Fri, Last",
         correctChoice: "Mon, 1st")
 
+        let question17 = spappQuestion(
+        question: "The _________ embassy lies across the street from Spence",
+        choice1:"English",
+        choice2:"Chinese",
+        choice3:"Russian",
+        correctChoice: "Russian")
 
+        let question18 = spappQuestion(
+        question: "Where are the majority of science classes held?",
+        choice1:"7th floor",
+        choice2:"6th floor",
+        choice3:"the locker room",
+        correctChoice: "the 6th floor")
+
+        let question19 = spappQuestion(
+        question: "How many students take Greek(independent study) at Spence?",
+        choice1:"12",
+        choice2:"16",
+        choice3:"1",
+        correctChoice: "1")
+
+        /* let question20 = spappQuestion
+        question: ""
+        choice1:""
+        choice2:""
+        choice3:""
+        correctChoice: "")
+
+
+        let question21 = spappQuestion
+        question: ""
+        choice1:""
+        choice2:""
+        choice3:""
+        correctChoice: "")
+
+        let question22 = spappQuestion
+        question: ""
+        choice1:""
+        choice2:""
+        choice3:""
+        correctChoice: "")
+
+
+        let question23 = spappQuestion
+        question: ""
+        choice1:""
+        choice2:""
+        choice3:""
+        correctChoice: "")
+
+
+        let question24 = spappQuestion
+        question: ""
+        choice1:""
+        choice2:""
+        choice3:""
+        correctChoice: "") */
+
+
+
+
+
+var levelOneQuestions: [spappQuestion] = [question17, question18, question19]
+// question20, question21, question22, question23, question24]
 
     var levelTwoQuestions: [spappQuestion] = [question1, question2, question3,question4, question5, question6, question7, question8]
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +16,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //show the answers
     @IBOutlet weak var questionLabel: UILabel!
     //show the question
+    
+    var selectedRandomInteger:Int = 0
     
     var tableviewArray:Array<String> = []
     var passedQuestionArray:Array<spappQuestion> = []
@@ -26,12 +29,18 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //tableView.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        self.selectedRandomInteger = GKRandomSource.sharedRandom().nextInt(upperBound:passedQuestionArray.count)
     }
+        
+        
+        
+        
+   
     
     
     
     func displayQuestion () {
-        let quizQuestion = passedQuestionArray[7]
+        let quizQuestion = passedQuestionArray[selectedRandomInteger]
         questionLabel.text = quizQuestion.question
         tableviewArray.append(quizQuestion.choice1)
         tableviewArray.append(quizQuestion.choice2)
@@ -63,7 +72,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
         let selectedChoice = tableviewArray[indexPath.row]
-        let quizQuestion = passedQuestionArray[7]
+        let quizQuestion = passedQuestionArray[selectedRandomInteger]
         if selectedChoice == quizQuestion.correctChoice{
             print("Great Choice. You got it right!")
             
