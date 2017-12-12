@@ -18,19 +18,34 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //show the question
     
     var selectedRandomInteger:Int = 0
-    
+    var roundQuestionArray:Array<spappQuestion> = []
     var tableviewArray:Array<String> = []
     var passedQuestionArray:Array<spappQuestion> = []
+    var quizQuestion:spappQuestion?
     // display the questions and add all the answers into the array
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+       
+        roundQuestionArray = passedQuestionArray
+        
         displayQuestion()
         //tableView.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
-        self.selectedRandomInteger = GKRandomSource.sharedRandom().nextInt(upperBound:passedQuestionArray.count)
+      
     }
+    
+    func giveRandomQuestion()-> spappQuestion{
+        let randomInt = GKRandomSource.sharedRandom().nextInt(upperBound:roundQuestionArray.count)
+        roundQuestionArray.count
+        
+        let currentQuestion = roundQuestionArray[randomInt]
+        roundQuestionArray.remove(at: randomInt)
+        return currentQuestion
+    }
+    
         
         
         
@@ -40,13 +55,23 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func displayQuestion () {
-        let quizQuestion = passedQuestionArray[selectedRandomInteger]
-        questionLabel.text = quizQuestion.question
-        tableviewArray.append(quizQuestion.choice1)
-        tableviewArray.append(quizQuestion.choice2)
-        tableviewArray.append(quizQuestion.choice3)
+        tableviewArray = []
+        self.quizQuestion = giveRandomQuestion()
+       
+        questionLabel.text = quizQuestion?.question
+        tableviewArray.append((quizQuestion?.choice1)!)
+        tableviewArray.append((quizQuestion?.choice2)!)
+        tableviewArray.append((quizQuestion?.choice3)!)
     }
     
+    func nextQuestion( alert: UIAlertAction!) {
+        if roundQuestionArray.count>0 {
+        displayQuestion()
+        tableView.reloadData()
+        } else {
+    
+        }
+    }
     
     
         // MARK: - Table view data source
@@ -69,22 +94,23 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
         let selectedChoice = tableviewArray[indexPath.row]
-        let quizQuestion = passedQuestionArray[selectedRandomInteger]
-        if selectedChoice == quizQuestion.correctChoice{
+    
+        if selectedChoice == self.quizQuestion?.correctChoice{
             print("Great Choice. You got it right!")
             
             let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
             
         } else {
             print("Oops! You got it wrong!")
             let alertController = UIAlertController(title: "Bad Choice", message: "Oops!", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }
