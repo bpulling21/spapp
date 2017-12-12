@@ -48,12 +48,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
         
         
-        
-        
-   
-    
-    
-    
     func displayQuestion () {
         tableviewArray = []
         self.quizQuestion = giveRandomQuestion()
@@ -69,6 +63,10 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         displayQuestion()
         tableView.reloadData()
         } else {
+            let alertController = UIAlertController(title: "You finished this level!", message: "But did you do well?????", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
     
         }
     }
@@ -85,11 +83,11 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // #warning Incomplete implementation, return the number of rows
         return tableviewArray.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
         
         cell.textLabel?.text = tableviewArray[indexPath.row]
+        cell.textLabel?.font = cell.textLabel?.font.withSize(13)
         
         return cell
     }
@@ -115,7 +113,9 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             present(alertController, animated: true, completion: nil)
         }
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 
 
         /*

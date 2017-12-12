@@ -199,7 +199,7 @@
 				TargetAttributes = {
 					42EC53521F79271C006CCB73 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 32GER86CW3;
+						DevelopmentTeam = 79X366WY42;
 						ProvisioningStyle = Automatic;
 					};
 					42EC53661F79271C006CCB73 = {
@@ -423,7 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32GER86CW3;
+				DEVELOPMENT_TEAM = 79X366WY42;
 				INFOPLIST_FILE = SPAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrookePulling.SPAPP;
@@ -436,7 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32GER86CW3;
+				DEVELOPMENT_TEAM = 79X366WY42;
 				INFOPLIST_FILE = SPAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrookePulling.SPAPP;

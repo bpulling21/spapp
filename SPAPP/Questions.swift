@@ -54,7 +54,7 @@ import UIKit
         correctChoice: "Central Park")
 
     let question6 = spappQuestion(
-        question: "What sudject does Ms. Krauthamer teach?",
+        question: "What subject does Ms. Krauthamer teach?",
         choice1: "English",
         choice2: "French",
         choice3: "Health",
@@ -105,7 +105,7 @@ import UIKit
 
     let question13 = spappQuestion(
         question: "Which teacher in Spence has taught the most classes?",
-        choice1: "Mr, Bailey",
+        choice1: "Mr. Bailey",
         choice2: "Ms. Saltzman",
         choice3: "It's a tie between many teachers",
         correctChoice: "Ms. Saltzman")
