@@ -61,7 +61,7 @@ import UIKit
         correctChoice: "French")
 
     let question7 = spappQuestion(
-        question: "Which grade is allowed in the elevatorn during the school day?",
+        question: "Which grade is allowed in the elevator during the school day?",
         choice1: "Freshman and 8th graders",
         choice2: "Seniors only",
         choice3: "Anyone",

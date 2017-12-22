@@ -24,6 +24,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var quizQuestion:spappQuestion?
     // display the questions and add all the answers into the array
     
+    var numCorrectAnswers:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -63,7 +65,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         displayQuestion()
         tableView.reloadData()
         } else {
-            let alertController = UIAlertController(title: "You finished this level!", message: "But did you do well?????", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "You finished this level!", message: "You got \(numCorrectAnswers) right!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
@@ -92,14 +94,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
         let selectedChoice = tableviewArray[indexPath.row]
     
         if selectedChoice == self.quizQuestion?.correctChoice{
             print("Great Choice. You got it right!")
-            
+            numCorrectAnswers += 1
             let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
