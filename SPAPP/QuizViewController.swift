@@ -66,13 +66,18 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.reloadData()
         } else {
             let alertController = UIAlertController(title: "You finished this level!", message: "You got \(numCorrectAnswers) right!", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: goBackToMenu)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
     
         }
     }
     
+    func goBackToMenu (alert: UIAlertAction!){
+        dismiss(animated: false, completion: nil)
+        
+        
+    }
     
         // MARK: - Table view data source
     
