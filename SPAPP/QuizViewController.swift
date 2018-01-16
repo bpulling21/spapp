@@ -16,9 +16,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //show the answers
     @IBOutlet weak var questionLabel: UILabel!
     //show the question
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var enterNameField: UITextField!
+    @IBOutlet weak var msDaley: UIImageView!
     
-        
-        var selectedRandomInteger:Int = 0
+    
+    
+    var selectedRandomInteger:Int = 0
         var roundQuestionArray:Array<spappQuestion> = []
         var tableviewArray:Array<String> = []
         var passedQuestionArray:Array<spappQuestion> = []
@@ -94,7 +98,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             func displayQuestion () {
                 tableviewArray = []
                 self.quizQuestion = giveRandomQuestion()
+                answerTableView.isHidden = false
+                msDaley.isHidden = true
+                if self.quizQuestion?.question == "Who is this? (Type in response, last name ONLY)"{
+                answerTableView.isHidden = true
+                msDaley.isHidden = false
                 
+                }
                 questionLabel.text = quizQuestion?.question
                 tableviewArray.append((quizQuestion?.choice1)!)
                 tableviewArray.append((quizQuestion?.choice2)!)
