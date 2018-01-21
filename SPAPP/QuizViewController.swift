@@ -18,7 +18,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //show the question
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var enterNameField: UITextField!
-    @IBOutlet weak var msDaley: UIImageView!
+    @IBOutlet weak var claraSpenceBust: UIImageView!
+    
     
     
     
@@ -98,18 +99,47 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             func displayQuestion () {
                 tableviewArray = []
                 self.quizQuestion = giveRandomQuestion()
+//                this standard multiple choice question
                 answerTableView.isHidden = false
-                msDaley.isHidden = true
-                if self.quizQuestion?.question == "Who is this? (Type in response, last name ONLY)"{
+                claraSpenceBust.isHidden = true
+                enterNameField.isHidden = true
+                submitButton.isHidden = true
+                //                this is the clara spence bust questioan, text field with ficture claraSpenceBust
+                if self.quizQuestion?.question == "Who is this? (Type in response below)"{
                 answerTableView.isHidden = true
-                msDaley.isHidden = false
-                
+                claraSpenceBust.isHidden = false
+                enterNameField.isHidden = false
+                submitButton.isHidden = false
                 }
                 questionLabel.text = quizQuestion?.question
                 tableviewArray.append((quizQuestion?.choice1)!)
                 tableviewArray.append((quizQuestion?.choice2)!)
                 tableviewArray.append((quizQuestion?.choice3)!)
             }
+    
+    
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        if enterNameField.text == "Clara Spence" {
+            numCorrectAnswers += 1
+        let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+        }
+        else {
+            print("Oops! You got it wrong!")
+            let alertController = UIAlertController(title: "Bad Choice", message: "Oops!", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
+    
+    
             // MARK: - Table view data source
             
             func numberOfSections(in tableView: UITableView) -> Int {
@@ -152,7 +182,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             }
             func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-                return 80
+                return 55
             }
             
             

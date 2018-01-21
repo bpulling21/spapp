@@ -15,6 +15,8 @@ import UIKit
         let choice1: String
         let choice2: String
         let choice3: String
+        let choice4: String? = nil
+//        the question mark indicates that it is not necesay to have this choice---> it is optional
         let correctChoice: String
     }
     
@@ -152,22 +154,32 @@ import UIKit
         choice3:"1",
         correctChoice: "1")
 
-        let question20 = spappQuestion(
-question: "Who is this? (Type in response, last name ONLY)",
+      let question20 = spappQuestion(
+        question: "Who is this? (Type in response below)",
         choice1:"",
         choice2:"",
         choice3:"",
-        correctChoice: "Brizendine")
+        correctChoice: "Clara Spence")
 
 
-        /*let question21 = spappQuestion
-        question: ""
-        choice1:""
-        choice2:""
-        choice3:""
-        correctChoice: "")
 
-        let question22 = spappQuestion
+        let question21 = spappQuestion(
+        question: "Where can you find the door that is on the school logo? ",
+        choice1: "Door of the original Spence School Townhouse on 6 West 48th Street",
+        choice2: "Door of the old Spence School townhouse on 30 West 55th Street ",
+        choice3: "Door of the current Spence building on 22 East 91st street",
+//        choice4: "Door of the old lower school building on 56 East 93rd Street”,
+        correctChoice: "Door of the current Spence building on 22 East 91st street")
+
+
+//      let question21 = spappQuestion
+//        question: ""
+//        choice1:""
+//        choice2:""
+//        choice3:""
+//        correctChoice: "")
+
+        /*let question22 = spappQuestion
         question: ""
         choice1:""
         choice2:""
