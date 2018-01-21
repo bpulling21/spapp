@@ -19,6 +19,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var enterNameField: UITextField!
     @IBOutlet weak var claraSpenceBust: UIImageView!
+    @IBOutlet weak var spenceLogo: UIImageView!
     
     
     
@@ -29,7 +30,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var passedQuestionArray:Array<spappQuestion> = []
         var quizQuestion:spappQuestion?
         // display the questions and add all the answers into the array
-        var i = 3
+        var i = 5
         var numCorrectAnswers:Int = 0
         
         override func viewDidLoad() {
@@ -104,13 +105,25 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 claraSpenceBust.isHidden = true
                 enterNameField.isHidden = true
                 submitButton.isHidden = true
+                spenceLogo.isHidden = true
+                
                 //                this is the clara spence bust questioan, text field with ficture claraSpenceBust
                 if self.quizQuestion?.question == "Who is this? (Type in response below)"{
                 answerTableView.isHidden = true
                 claraSpenceBust.isHidden = false
                 enterNameField.isHidden = false
                 submitButton.isHidden = false
+                spenceLogo.isHidden = true
                 }
+                
+                if self.quizQuestion?.question == "Where can you find the door that is on the school logo? " {
+                    answerTableView.isHidden = false
+                    claraSpenceBust.isHidden = true
+                    enterNameField.isHidden = true
+                    submitButton.isHidden = true
+                    spenceLogo.isHidden = false
+                }
+        
                 questionLabel.text = quizQuestion?.question
                 tableviewArray.append((quizQuestion?.choice1)!)
                 tableviewArray.append((quizQuestion?.choice2)!)
