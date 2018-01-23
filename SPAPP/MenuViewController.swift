@@ -37,6 +37,11 @@ class MenuViewController: UIViewController {
 
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segue_to_level_one"{
+            let destination = segue.destination as! QuizViewController
+            destination.passedQuestionArray = levelOneQuestions
+        }
         if segue.identifier == "segue_to_level_two"{
             let destination = segue.destination as! QuizViewController
             destination.passedQuestionArray = levelTwoQuestions

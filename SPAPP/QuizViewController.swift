@@ -20,6 +20,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var enterNameField: UITextField!
     @IBOutlet weak var claraSpenceBust: UIImageView!
     @IBOutlet weak var spenceLogo: UIImageView!
+    @IBOutlet weak var questionCountLabel: UILabel!
     
     
     
@@ -64,11 +65,12 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             func nextQuestion( alert: UIAlertAction!) {
                 
                 if i > 0 {
+                    i -= 1
                     displayQuestion()
                     tableView.reloadData()
                     
                     
-                    i -= 1
+//                    i -= 1
                     //            i is equal to i minus one = counter
                     
                 } else {
@@ -106,6 +108,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 enterNameField.isHidden = true
                 submitButton.isHidden = true
                 spenceLogo.isHidden = true
+                questionCountLabel.text = "\(i+1)"
                 
                 //                this is the clara spence bust questioan, text field with ficture claraSpenceBust
                 if self.quizQuestion?.question == "Who is this? (Type in response below)"{
@@ -128,6 +131,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 tableviewArray.append((quizQuestion?.choice1)!)
                 tableviewArray.append((quizQuestion?.choice2)!)
                 tableviewArray.append((quizQuestion?.choice3)!)
+                tableviewArray.append((quizQuestion?.choice4)!)
             }
     
     
