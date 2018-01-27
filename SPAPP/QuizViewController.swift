@@ -21,6 +21,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var claraSpenceBust: UIImageView!
     @IBOutlet weak var spenceLogo: UIImageView!
     @IBOutlet weak var questionCountLabel: UILabel!
+    @IBOutlet weak var movedTableViewConstraint: NSLayoutConstraint!
     
     
     
@@ -118,6 +119,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 submitButton.isHidden = false
                 spenceLogo.isHidden = true
                 }
+//                this is the spence school logo question.
                 
                 if self.quizQuestion?.question == "Where can you find the door that is on the school logo? " {
                     answerTableView.isHidden = false
@@ -125,6 +127,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     enterNameField.isHidden = true
                     submitButton.isHidden = true
                     spenceLogo.isHidden = false
+                    movedTableViewConstraint.isActive = true
                 }
         
                 questionLabel.text = quizQuestion?.question
@@ -136,7 +139,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        if enterNameField.text == "Clara Spence" {
+        if enterNameField.text?.lowercased() == question44.correctChoice {
             numCorrectAnswers += 1
         let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)

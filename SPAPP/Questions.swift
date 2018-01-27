@@ -365,9 +365,7 @@ let question44 = spappQuestion(
     choice2:"",
     choice3:"",
     choice4: "",
-    correctChoice: "Clara Spence")
-
-
+    correctChoice: "clara spence")
 
 let question45 = spappQuestion(
     question: "Where can you find the door that is on the school logo? ",

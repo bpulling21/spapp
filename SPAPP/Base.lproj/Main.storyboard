@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dDo-ad-t0B">
-                                <rect key="frame" x="46" y="367" width="282" height="266.5"/>
+                                <rect key="frame" x="46" y="250.5" width="282" height="266.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.0087729168779999995" green="0.015778338789999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -78,11 +78,11 @@
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uap-At-OLD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spenceLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9YG-I7-HBv">
-                                <rect key="frame" x="87" y="160" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalSpenceLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9YG-I7-HBv">
+                                <rect key="frame" x="97" y="170" width="180" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="4Vb-ch-zlm"/>
-                                    <constraint firstAttribute="width" constant="200" id="sYJ-Vr-eBd"/>
+                                    <constraint firstAttribute="height" constant="180" id="4Vb-ch-zlm"/>
+                                    <constraint firstAttribute="width" constant="180" id="sYJ-Vr-eBd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImS-Wg-am9" userLabel="questionCount">
@@ -96,9 +96,10 @@
                         <constraints>
                             <constraint firstItem="dDo-ad-t0B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="0rI-Cz-kPA"/>
                             <constraint firstItem="dDo-ad-t0B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1lj-O8-iED"/>
-                            <constraint firstItem="dDo-ad-t0B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="4OX-P3-WNf"/>
+                            <constraint firstItem="dDo-ad-t0B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" placeholder="YES" id="4OX-P3-WNf" userLabel="Answer Table View.centerY = 1.6 × centerY"/>
                             <constraint firstItem="8wF-to-g5i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gt-aB-0J7"/>
                             <constraint firstItem="8wF-to-g5i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="8v5-Fh-5wO"/>
+                            <constraint firstItem="dDo-ad-t0B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="Apr-eZ-sP0"/>
                             <constraint firstItem="dDo-ad-t0B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="BhB-nM-KZn"/>
                             <constraint firstItem="d5m-rg-gde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PZ8-7b-bX0"/>
                             <constraint firstItem="9YG-I7-HBv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.78" id="Qd9-sH-aKY"/>
@@ -119,6 +120,7 @@
                         <outlet property="answerTableView" destination="dDo-ad-t0B" id="z08-T8-5QU"/>
                         <outlet property="claraSpenceBust" destination="8wF-to-g5i" id="w8t-Sb-dP1"/>
                         <outlet property="enterNameField" destination="kR3-Xf-vgH" id="IZU-wy-OAV"/>
+                        <outlet property="movedTableViewConstraint" destination="4OX-P3-WNf" id="MmA-iX-gnB"/>
                         <outlet property="questionCountLabel" destination="ImS-Wg-am9" id="jIm-Bt-QO0"/>
                         <outlet property="questionLabel" destination="1ll-47-QUi" id="Smc-9Y-pfO"/>
                         <outlet property="spenceLogo" destination="9YG-I7-HBv" id="z5u-SD-x5t"/>
@@ -294,7 +296,7 @@
     </scenes>
     <resources>
         <image name="claraSpenceBust" width="682" height="724"/>
-        <image name="spenceLogo" width="225" height="225"/>
+        <image name="finalSpenceLogo" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5jt-q9-v0U"/>
