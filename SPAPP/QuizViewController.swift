@@ -21,7 +21,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var claraSpenceBust: UIImageView!
     @IBOutlet weak var spenceLogo: UIImageView!
     @IBOutlet weak var questionCountLabel: UILabel!
-    @IBOutlet weak var movedTableViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewYConstraint: NSLayoutConstraint!
+    
     
     
     
@@ -110,6 +111,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 submitButton.isHidden = true
                 spenceLogo.isHidden = true
                 questionCountLabel.text = "\(i+1)"
+                 tableViewYConstraint.constant = 0
                 
                 //                this is the clara spence bust questioan, text field with ficture claraSpenceBust
                 if self.quizQuestion?.question == "Who is this? (Type in response below)"{
@@ -118,6 +120,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 enterNameField.isHidden = false
                 submitButton.isHidden = false
                 spenceLogo.isHidden = true
+                 tableViewYConstraint.constant = 0
                 }
 //                this is the spence school logo question.
                 
@@ -127,7 +130,9 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     enterNameField.isHidden = true
                     submitButton.isHidden = true
                     spenceLogo.isHidden = false
-                    movedTableViewConstraint.isActive = true
+                    tableViewYConstraint.constant = 110
+                    tableView.layoutIfNeeded()
+                    
                 }
         
                 questionLabel.text = quizQuestion?.question
