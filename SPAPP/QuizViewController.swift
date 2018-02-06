@@ -80,14 +80,14 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // this is the clara spence bust question, text field with ficture claraSpenceBust
         if self.quizQuestion?.question == "Who is this? (Type in response below)"{
-        answerTableView.isHidden = true
-        claraSpenceBust.isHidden = false
-        enterNameField.isHidden = false
-        submitButton.isHidden = false
-        spenceLogo.isHidden = true
-        tableViewYConstraint.constant = 0
+            answerTableView.isHidden = true
+            claraSpenceBust.isHidden = false
+            enterNameField.isHidden = false
+            submitButton.isHidden = false
+            spenceLogo.isHidden = true
+            tableViewYConstraint.constant = 0
         }
-//                this is the spence school logo question.
+        // this is the spence school logo question.
         if self.quizQuestion?.question == "Where can you find the door that is on the school logo? " {
             answerTableView.isHidden = false
             claraSpenceBust.isHidden = true
@@ -96,9 +96,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             spenceLogo.isHidden = false
             tableViewYConstraint.constant = 110
             tableView.layoutIfNeeded()
-            
         }
-
         questionLabel.text = quizQuestion?.question
         tableviewArray.append((quizQuestion?.choice1)!)
         tableviewArray.append((quizQuestion?.choice2)!)
@@ -133,7 +131,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
-        
         cell.textLabel?.text = tableviewArray[indexPath.row]
         cell.textLabel?.font = cell.textLabel?.font.withSize(13)
         
@@ -150,7 +147,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
-            
         } else {
             print("Oops! You got it wrong!")
             let alertController = UIAlertController(title: "Bad Choice", message: "Oops!", preferredStyle: UIAlertControllerStyle.alert)
