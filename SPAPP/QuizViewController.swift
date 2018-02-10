@@ -130,10 +130,16 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
-        cell.textLabel?.text = tableviewArray[indexPath.row]
-        cell.textLabel?.font = cell.textLabel?.font.withSize(13)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as! AnswerTableViewCell
+        cell.backgroundAnswerView.layer.cornerRadius = 15
+        cell.answerLabel.text = tableviewArray[indexPath.row]
+        cell.backgroundAnswerView.layer.borderWidth = 4
+        cell.backgroundAnswerView.layer.borderColor = UIColor(red: 0, green: 63, blue: 245, alpha: 1).cgColor
         
+        
+//        cell.textLabel?.text = tableviewArray[indexPath.row]
+//        cell.textLabel?.font = cell.textLabel?.font.withSize(13)
+//        index path assigns integer values counting from zero to each row
         return cell
     }
 

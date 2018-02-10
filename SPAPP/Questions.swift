@@ -20,9 +20,9 @@ struct spappQuestion {
 }
 
 let question2 = spappQuestion(
-    question: "Which of these rules that apply to this day did NOT come directly from Ms. Clara Spence?",
-    choice1:"Serving dessert just once a week",
-    choice2:"Taking the stairs despite the availability of an elevator",
+    question: "Which of these rules did NOT come directly from Ms. Clara Spence?",
+    choice1:"Serving dessert once a week",
+    choice2:"Taking the stairs and not the elevator",
     choice3:"Wearing a uniform",
     choice4:"Required physical education",
     correctChoice: "Wearing a uniform")
