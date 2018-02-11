@@ -134,7 +134,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.backgroundAnswerView.layer.cornerRadius = 15
         cell.answerLabel.text = tableviewArray[indexPath.row]
         cell.backgroundAnswerView.layer.borderWidth = 4
-        cell.backgroundAnswerView.layer.borderColor = UIColor(red: 0, green: 63, blue: 245, alpha: 1).cgColor
+        cell.backgroundAnswerView.layer.borderColor = UIColor(red: 0, green: 0, blue: 256, alpha: 1).cgColor
         
         
 //        cell.textLabel?.text = tableviewArray[indexPath.row]
@@ -163,6 +163,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return 80
     }
 }
