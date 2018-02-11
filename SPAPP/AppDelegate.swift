@@ -3,7 +3,7 @@
 //  SPAPP
 //
 //  Created by Brooke Li Shan on 25/9/2017.
-//  Copyright © 2017 Brooke Pulling. All rights reserved.
+//  Copyright © 2017 Broozaand SPulling. All rights reserved.
 //
 
 import UIKit
