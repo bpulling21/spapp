@@ -76,7 +76,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         submitButton.isHidden = true
         spenceLogo.isHidden = true
         questionCountLabel.text = "\(i+1)"
-        tableViewYConstraint.constant = 0
+        tableViewYConstraint.constant = 20
         
         // this is the clara spence bust question, text field with ficture claraSpenceBust
         if self.quizQuestion?.question == "Who is this? (Type in response below)"{
