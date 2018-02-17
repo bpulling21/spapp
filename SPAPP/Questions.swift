@@ -81,7 +81,7 @@ let question9 = spappQuestion(
     choice1:"Spencer the Spider",
     choice2: "Spencer the Saber",
     choice3:"Spencer the Sparrow",
-    choice4:"Spencer the Squirrel",
+    choice4:"Spencer the Snake",
     correctChoice: "Spence the Saber")
 
 let question10 = spappQuestion(
@@ -129,7 +129,7 @@ let question15 = spappQuestion(
     choice1:"Spence used to be a coed school",
     choice2:"Boys attended Spence school if they were younger siblings",
     choice3:"Boys attended Spence School only in the late 1800’s",
-    choice4:"Boys continued to attend Spence School until 1929.",
+    choice4:"Boys continued to attend Spence School until 1929",
     correctChoice: "Boys attended Spence School only in the late 1800’s")
 
 let question16 = spappQuestion(
