@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="311" y="139"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="VXs-cS-e7p">
@@ -220,13 +220,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segue_to_level_three" id="Phe-gJ-L6b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o29-wG-ZNz">
-                                <rect key="frame" x="320" y="621" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o29-wG-ZNz">
+                                <rect key="frame" x="320" y="614.5" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="SfZ-kC-aMd"/>
                                     <constraint firstAttribute="width" secondItem="o29-wG-ZNz" secondAttribute="height" multiplier="1:1" id="rAJ-H2-xca"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" red="0.98825462139999998" green="1" blue="0.36187980539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="settingsIcon">
+                                    <color key="titleColor" red="0.98825462139999998" green="1" blue="0.36187980539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="KDb-gq-gac" kind="show" id="E5v-wr-9lc"/>
                                 </connections>
@@ -235,13 +238,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="f2R-7f-pbj" firstAttribute="centerY" secondItem="YzP-zR-ulj" secondAttribute="centerY" id="DEi-Dh-bUe"/>
-                            <constraint firstAttribute="trailing" secondItem="o29-wG-ZNz" secondAttribute="trailing" constant="9" id="GrM-NG-cRy"/>
+                            <constraint firstItem="o29-wG-ZNz" firstAttribute="trailing" secondItem="YzP-zR-ulj" secondAttribute="trailing" constant="-9" id="GrM-NG-cRy"/>
                             <constraint firstItem="2Nd-ng-Koz" firstAttribute="centerY" secondItem="YzP-zR-ulj" secondAttribute="centerY" multiplier="0.5" id="HNw-QC-9FM"/>
                             <constraint firstItem="pV8-fT-Frj" firstAttribute="centerX" secondItem="YzP-zR-ulj" secondAttribute="centerX" id="RT3-6F-jvo"/>
                             <constraint firstItem="f2R-7f-pbj" firstAttribute="centerX" secondItem="YzP-zR-ulj" secondAttribute="centerX" id="Re5-KE-Fl8"/>
                             <constraint firstItem="pV8-fT-Frj" firstAttribute="centerY" secondItem="YzP-zR-ulj" secondAttribute="centerY" multiplier="1.5" id="anZ-3C-DxJ"/>
                             <constraint firstItem="2Nd-ng-Koz" firstAttribute="centerX" secondItem="YzP-zR-ulj" secondAttribute="centerX" id="lbV-wJ-DCT"/>
-                            <constraint firstItem="ril-Re-MxA" firstAttribute="top" secondItem="o29-wG-ZNz" secondAttribute="bottom" id="lyl-xk-oL9"/>
+                            <constraint firstItem="o29-wG-ZNz" firstAttribute="bottom" secondItem="ril-Re-MxA" secondAttribute="top" multiplier="0.99" id="lyl-xk-oL9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -254,24 +257,44 @@
             </objects>
             <point key="canvasLocation" x="-631.20000000000005" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="FmH-tj-gs0">
             <objects>
-                <viewController id="muH-aN-hIc" sceneMemberID="viewController">
+                <viewController id="muH-aN-hIc" customClass="SettingsViewController" customModule="SPAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wDA-Hd-Twu"/>
                         <viewControllerLayoutGuide type="bottom" id="5sr-Mx-MET"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KyJ-pI-ilr">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="KyJ-pI-ilr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-fc-18b">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerX" secondItem="KyJ-pI-ilr" secondAttribute="centerX" id="YVZ-YL-LI7"/>
+                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" id="jm5-qg-d0X"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MuB-29-2Cr"/>
+                    <navigationItem key="navigationItem" id="MuB-29-2Cr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="n3x-90-MoP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LAK-8L-AXJ">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dl9-d5-AbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="847.82608695652175"/>
+            <point key="canvasLocation" x="392.80000000000001" y="966.56671664167925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OA8-WA-Ggq">
@@ -289,7 +312,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvm-Bo-Cd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-945" y="847"/>
+            <point key="canvasLocation" x="-631" y="967"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="495-op-2ip">
@@ -307,11 +330,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBw-35-yxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1902" y="161"/>
         </scene>
     </scenes>
     <resources>
         <image name="claraSpenceBust" width="682" height="724"/>
         <image name="finalSpenceLogo" width="500" height="500"/>
+        <image name="settingsIcon" width="471" height="471"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5jt-q9-v0U"/>
