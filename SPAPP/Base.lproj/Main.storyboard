@@ -270,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-fc-18b">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="156.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -279,15 +279,20 @@
                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XaK-fc-18b" firstAttribute="centerX" secondItem="KyJ-pI-ilr" secondAttribute="centerX" id="YVZ-YL-LI7"/>
-                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" id="jm5-qg-d0X"/>
+                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" multiplier="0.5" id="jm5-qg-d0X"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MuB-29-2Cr">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="n3x-90-MoP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LAK-8L-AXJ">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LAK-8L-AXJ">
+                                <rect key="frame" x="16" y="0.0" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="backArrow">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="muH-aN-hIc" eventType="touchUpInside" id="Rdo-RC-9O8"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -334,6 +339,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backArrow" width="700" height="700"/>
         <image name="claraSpenceBust" width="682" height="724"/>
         <image name="finalSpenceLogo" width="500" height="500"/>
         <image name="settingsIcon" width="471" height="471"/>

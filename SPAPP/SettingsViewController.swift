@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +21,9 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
