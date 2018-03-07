@@ -108,13 +108,13 @@
 				42EC53561F79271C006CCB73 /* AppDelegate.swift */,
 				7BE2CD8B1FC4DC8600B7BB46 /* MenuViewController.swift */,
 				42EC53841F792E23006CCB73 /* QuizViewController.swift */,
+				7BBCEB88203C84AE0009B03A /* SettingsViewController.swift */,
+				7B5CE78C202A69C300D836D4 /* AnswerTableViewCell.swift */,
 				7B802DF11F94DF1400DCF463 /* Questions.swift */,
 				42EC535A1F79271C006CCB73 /* Main.storyboard */,
 				42EC535F1F79271C006CCB73 /* LaunchScreen.storyboard */,
 				42EC535D1F79271C006CCB73 /* Assets.xcassets */,
 				42EC53621F79271C006CCB73 /* Info.plist */,
-				7B5CE78C202A69C300D836D4 /* AnswerTableViewCell.swift */,
-				7BBCEB88203C84AE0009B03A /* SettingsViewController.swift */,
 			);
 			path = SPAPP;
 			sourceTree = "<group>";

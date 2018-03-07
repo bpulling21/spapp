@@ -11,9 +11,14 @@ import UIKit
 class SettingsViewController: UIViewController {
 
    
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let widthConstraint = backButton.widthAnchor.constraint(equalToConstant: 30)
+        
+        let heightConstraint = backButton.heightAnchor.constraint(equalToConstant: 30)
+        widthConstraint.isActive = true
+        heightConstraint.isActive = true
         // Do any additional setup after loading the view.
     }
 

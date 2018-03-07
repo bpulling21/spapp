@@ -31,6 +31,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // display the questions and add all the answers into the array
     var i = 5
     var numCorrectAnswers:Int = 0
+    var totalNumQuestions = 6
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             displayQuestion()
             tableView.reloadData()
         } else {
-            let alertController = UIAlertController(title: "You finished this level!", message: "You got \(numCorrectAnswers) right!", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "You finished this level!", message: "You got \(numCorrectAnswers) out of \(totalNumQuestions)/ right!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: goBackToMenu)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
@@ -155,7 +157,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             present(alertController, animated: true, completion: nil)
         } else {
             print("Oops! You got it wrong!")
-            let alertController = UIAlertController(title: "Bad Choice", message: "Oops!", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "Bad Choice", message: "Try Again!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
