@@ -32,6 +32,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var i = 5
     var numCorrectAnswers:Int = 0
     var totalNumQuestions = 6
+    
 
         
     override func viewDidLoad() {
@@ -57,10 +58,22 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             displayQuestion()
             tableView.reloadData()
         } else {
-            let alertController = UIAlertController(title: "You finished this level!", message: "You got \(numCorrectAnswers) out of \(totalNumQuestions)/ right!", preferredStyle: UIAlertControllerStyle.alert)
+            var customTitle = ""
+            if numCorrectAnswers == 0 {
+                customTitle = "Nooo! Better luck next time!"
+            } else if numCorrectAnswers == totalNumQuestions {
+                customTitle = "Perfect!"
+                
+            } else {
+                customTitle = "You finished this level"
+            }
+            
+            
+            let alertController = UIAlertController(title: customTitle, message: "You got \(numCorrectAnswers) out of \(totalNumQuestions) right!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: goBackToMenu)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
+           
         }
     }
 
@@ -157,7 +170,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             present(alertController, animated: true, completion: nil)
         } else {
             print("Oops! You got it wrong!")
-            let alertController = UIAlertController(title: "Bad Choice", message: "Try Again!", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "Bad Choice", message: "You got it wrong :(", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)

@@ -20,7 +20,7 @@ struct spappQuestion {
 }
 
 let question2 = spappQuestion(
-    question: "Which of these rules did NOT come from Ms. Clara Spence?",
+    question: "Which of these practices did NOT come from Ms. Clara Spence?",
     choice1:"Serving dessert just once a week",
     choice2:"Students not taking the elevator",
     choice3:"Wearing a uniform",
