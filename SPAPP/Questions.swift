@@ -27,13 +27,13 @@ let question2 = spappQuestion(
     choice4:"Required physical education",
     correctChoice: "Wearing a uniform")
 
-let question3 = spappQuestion(
-    question: "Who did not attend Spence School?",
-    choice1: "Kerry Washington",
-    choice2: "Gwyneth Paltrow",
-    choice3: "Emmy Rossum",
-    choice4: "Hillary Clinton",
-    correctChoice: "Hillary Clinton")
+//let question3 = spappQuestion(
+  //  question: "Who did not attend Spence School?",
+   // choice1: "Kerry Washington",
+  //  choice2: "Gwyneth Paltrow",
+   // choice3: "Emmy Rossum",
+   // choice4: "Hillary Clinton",
+   // correctChoice: "Hillary Clinton")
 
 let question4 = spappQuestion(
     question: "At what grade are students allowed to leave for lunch?",
@@ -56,9 +56,9 @@ let question6 = spappQuestion(
     question: "What does the B in Clara B Spence stand for?",
     choice1:"Bergdorf",
     choice2:"Brizendine",
-    choice3:"Bebbe",
+    choice3:"Beebe",
     choice4:"None of the above",
-    correctChoice: "Bebbe")
+    correctChoice: "Beebe")
 
 let question7 = spappQuestion(
     question: "Where did Clara Spence graduate from college?",
@@ -157,7 +157,7 @@ let question18 = spappQuestion(
     correctChoice: "13,266")
 
 let question19 = spappQuestion(
-    question: "What is the address of the new spence athletic facility?",
+    question: "What is the address of the new Spence athletic and educational facility?",
     choice1:"323 East 91st Street",
     choice2:"623 East 90th Street",
     choice3:"412 East 90th Street",
@@ -189,13 +189,13 @@ let question22 = spappQuestion(
     choice4:"All of the above",
     correctChoice: "All of the above")
 
-let question23 = spappQuestion(
-    question: "How many Headmistresses has Spence School had since it opened in 1892?",
-    choice1:"10",
-    choice2:"12",
-    choice3:"13",
-    choice4:"14",
-    correctChoice: "14")
+//let question23 = spappQuestion(
+   // question: "How many Headmistresses has Spence School had since it opened in 1892?",
+    //choice1:"10",
+    //choice2:"12",
+    //choice3:"13",
+   // choice4:"14",
+    //correctChoice: "14")
 
 let question24 = spappQuestion(
     question:"What is Bodie Brizendine's real name?",
@@ -230,19 +230,19 @@ let question27 = spappQuestion(
     correctChoice: "22 East 91st Street")
 
 let question28 = spappQuestion(
-    question: "Where is the Clara Spence tree?",
+    question: "Where is the Clara Spence memorial tree?",
     choice1: "The Osbourne Wing",
-    choice2: "Central Park",
+    choice2: "Central Park (East 93rd entrance)",
     choice3: "The Townhouse garden",
     choice4: "The lower school garden",
-    correctChoice: "Central Park")
+    correctChoice: "Central Park (East 93rd entrance)")
 
 let question29 = spappQuestion(
     question: "What is the school motto of Spence?",
-    choice1: "Non scholae sed vitae discimus",
-    choice2: "Non sibi sed patrae",
-    choice3: "Perge sed caute",
-    choice4: "Fortiter et recte",
+    choice1: "Non scholae sed vitae discimus (Not for school, but for life we learn)",
+    choice2: "Non sibi sed patrae (Not for self, but for country)",
+    choice3: "Perge sed caute (Proceed, but with caution)",
+    choice4: "Fortiter et recte (Bravely and Rightly)",
     correctChoice: "Non scholae sed vitae discimus")
 
 let question30 = spappQuestion(
@@ -269,45 +269,45 @@ let question32 = spappQuestion(
     choice4: "80%",
     correctChoice: "80%")
 
-let question33 = spappQuestion(
-    question: "You receive a detention after being late _____ times?",
-    choice1: "3",
-    choice2: "5",
-    choice3: "7",
-    choice4: "9",
-    correctChoice: "5")
+//let question33 = spappQuestion(
+   // question: "You receive a detention after being late _____ times?",
+    //choice1: "3",
+    //choice2: "5",
+    //choice3: "7",
+   //choice4: "9",
+   // correctChoice: "5")
 
-let question34 = spappQuestion(
-    question: "What is the largest number of free periods someone has?",
-    choice1: "7",
-    choice2: "8",
-    choice3: "9",
-    choice4: "10",
-    correctChoice: "9")
+//let question34 = spappQuestion(
+   // question: "What is the largest number of free periods someone has?",
+    //choice1: "7",
+   // choice2: "8",
+    //choice3: "9",
+   // choice4: "10",
+    //correctChoice: "9")
 
-let question35 = spappQuestion(
-    question: "What is the most used classroom in Spence?",
-    choice1: "1003",
-    choice2: "704",
-    choice3: "231",
-    choice4: "804",
-    correctChoice: "1003")
+//let question35 = spappQuestion(
+  //  question: "What is the most used classroom in Spence?",
+  //  choice1: "1003",
+   // choice2: "704",
+   // choice3: "231",
+   // choice4: "804",
+   // correctChoice: "1003")
 
-let question36 = spappQuestion(
-    question: "Which consolate is across the street from Spence?",
-    choice1:"Romanian",
-    choice2:"Chinese",
-    choice3:"Russian",
-    choice4:"None of the above",
-    correctChoice: "Russian")
+//let question36 = spappQuestion(
+   // question: "Which consolate is across the street from Spence?",
+   // choice1:"Romanian",
+    //choice2:"Chinese",
+    //choice3:"Russian",
+   // choice4:"None of the above",
+   // correctChoice: "Russian")
 
 let question37 = spappQuestion(
-    question: "How many students take Greek at Spence?",
-    choice1:"12",
-    choice2:"16",
-    choice3:"1",
-    choice4:"0",
-    correctChoice: "1")
+    question: "How many languages are taught at Spence?",
+    choice1:"6",
+    choice2:"5",
+    choice3:"4",
+    choice4:"3",
+    correctChoice: "6")
 
 let question38 = spappQuestion(
     question: "What are the Spence colors?",
@@ -317,13 +317,13 @@ let question38 = spappQuestion(
     choice4:"None of the above",
     correctChoice: "Blue and Yellow")
 
-let question39 = spappQuestion(
-    question: "What is the address of the Spence lower school",
-    choice1:"56 East 93rd Street",
-    choice2:"52 East 94th Street",
-    choice3:"22 East 91st Street",
-    choice4:"None of the above",
-    correctChoice: "56 East 93rd Street")
+//let question39 = spappQuestion(
+  //  question: "What is the address of the Spence lower school",
+   // choice1:"56 East 93rd Street",
+   // choice2:"52 East 94th Street",
+   // choice3:"22 East 91st Street",
+   // choice4:"None of the above",
+   // correctChoice: "56 East 93rd Street")
 
 let question40 = spappQuestion(
     question: "When was Spence founded?",
@@ -334,21 +334,21 @@ let question40 = spappQuestion(
     correctChoice: "1892")
 
 
-let question41 = spappQuestion(
-    question: "What grade is nail polish allowed?",
-    choice1:"5th",
-    choice2:"8th",
-    choice3:"9th",
-    choice4:"12th",
-    correctChoice: "5th")
+//let question41 = spappQuestion(
+ //   question: "What grade is nail polish allowed?",
+  //  choice1:"5th",
+  //  choice2:"8th",
+   // choice3:"9th",
+   // choice4:"12th",
+   // correctChoice: "5th")
 
-let question43 = spappQuestion(
-    question: "Which grade has the most students?",
-    choice1: "Kindergarten",
-    choice2: "6th",
-    choice3: "9th",
-    choice4: "12th",
-    correctChoice: "12th")
+//et question43 = spappQuestion(
+  //  question: "Which grade has the most students?",
+  //  choice1: "Kindergarten",
+  //  choice2: "6th",
+   // choice3: "9th",
+   // choice4: "12th",
+   // correctChoice: "12th")
 
 let question44 = spappQuestion(
     question: "Who is this? (Type in response below)",
@@ -358,20 +358,20 @@ let question44 = spappQuestion(
     choice4: "",
     correctChoice: "clara spence")
 
-let question45 = spappQuestion(
-    question: "Where is the door on the school logo? ",
-    choice1: "Door of the original Spence School Townhouse",
-    choice2: "Door of the second oldest Spence School townhouse ",
-    choice3: "Door of the current Spence building",
-    choice4: "Door of the lower school building" ,
-    correctChoice: "Door of the current Spence building")
+//let question45 = spappQuestion(
+  //  question: "Where is the door on the school logo? ",
+   // choice1: "Door of the original Spence School Townhouse",
+   // choice2: "Door of the second oldest Spence School townhouse ",
+   // choice3: "Door of the current Spence building",
+   // choice4: "Door of the lower school building" ,
+   // correctChoice: "Door of the current Spence building")
 
 
 
-var levelOneQuestions: [spappQuestion] = [question24, question18, question27, question11, question38, question8, question39, question19, question36, question29, question14, question32, question43, question4]
+var levelOneQuestions: [spappQuestion] = [question24, question18, question27, question11, question38, question8, question19, question29, question14, question32, question4]
 
-var levelTwoQuestions: [spappQuestion] = [question35, question41, question3, question37, question21, question25, question26, question28, question33, question34, question9, question10, question30]
+var levelTwoQuestions: [spappQuestion] = [question37, question21, question25, question26, question28,  question9, question10, question30]
 
-var levelThreeQuestions: [spappQuestion] = [question6, question7, question12, question13, question40, question22, question23, question15, question17, question16, question31, question5, question20, question2, question44, question45]
+var levelThreeQuestions: [spappQuestion] = [question6, question7, question12, question13, question40, question22, question15, question17, question16, question31, question5, question20, question2, question44]
 
 //var levelOneQuestions = []
