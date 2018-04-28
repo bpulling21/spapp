@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jhN-uh-UJv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jhN-uh-UJv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -269,8 +264,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hi! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-fc-18b">
-                                <rect key="frame" x="159" y="193" width="26" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hi! We are Brooke and Skyler, the creators of this app. We are currently a 9th grader and 7th grader at the Spence School. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-fc-18b">
+                                <rect key="frame" x="44" y="49" width="237" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="gnX-ER-RT7"/>
+                                    <constraint firstAttribute="height" constant="500" id="rX9-Wj-CfS" userLabel="height = 400"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4n-iB-nU5">
+                                <rect key="frame" x="69" y="117" width="237" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="M8l-rq-xGS"/>
+                                    <constraint firstAttribute="width" constant="237" id="U8r-oq-AKg"/>
+                                </constraints>
+                                <string key="text">We moved here two years, and we would have loved a way to learn more about Spence. SPAPP (Spence App) is a way for newcomers to learn more about our school. Have fun!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact us at spenceapp@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-aF-8fQ">
+                                <rect key="frame" x="68.5" y="450.5" width="237" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7ij-sp-7Fj"/>
+                                    <constraint firstAttribute="width" constant="237" id="Ozd-sA-JSc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -278,8 +298,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eAd-aF-8fQ" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" multiplier="1.5" id="Ja7-MV-efH"/>
+                            <constraint firstItem="eAd-aF-8fQ" firstAttribute="centerX" secondItem="KyJ-pI-ilr" secondAttribute="centerX" id="N3t-pj-eGe"/>
                             <constraint firstItem="XaK-fc-18b" firstAttribute="centerX" secondItem="KyJ-pI-ilr" secondAttribute="centerX" id="YVZ-YL-LI7"/>
-                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" multiplier="0.5" id="jm5-qg-d0X"/>
+                            <constraint firstItem="XaK-fc-18b" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" multiplier="0.6" id="jm5-qg-d0X"/>
+                            <constraint firstItem="Y4n-iB-nU5" firstAttribute="centerX" secondItem="KyJ-pI-ilr" secondAttribute="centerX" id="tOI-Oq-Yf4"/>
+                            <constraint firstItem="Y4n-iB-nU5" firstAttribute="centerY" secondItem="KyJ-pI-ilr" secondAttribute="centerY" multiplier="1.1" id="yVQ-jP-FDg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MuB-29-2Cr">

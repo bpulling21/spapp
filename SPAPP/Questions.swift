@@ -27,13 +27,13 @@ let question2 = spappQuestion(
     choice4:"Required physical education",
     correctChoice: "Wearing a uniform")
 
-//let question3 = spappQuestion(
-  //  question: "Who did not attend Spence School?",
-   // choice1: "Kerry Washington",
-  //  choice2: "Gwyneth Paltrow",
-   // choice3: "Emmy Rossum",
-   // choice4: "Hillary Clinton",
-   // correctChoice: "Hillary Clinton")
+let question3 = spappQuestion(
+    question: "Who did not attend Spence School?",
+    choice1: "Kerry Washington",
+    choice2: "Gwyneth Paltrow",
+    choice3: "Emmy Rossum",
+    choice4: "Hillary Clinton",
+    correctChoice: "Hillary Clinton")
 
 let question4 = spappQuestion(
     question: "At what grade are students allowed to leave for lunch?",
@@ -87,10 +87,10 @@ let question9 = spappQuestion(
 let question10 = spappQuestion(
     question: "Which of these has been, one time, a Spence Team mascot?",
     choice1:"a penguin",
-    choice2:"a monkey",
-    choice3:"grandpop",
-    choice4:"all of the above",
-    correctChoice: "all of the above")
+    choice2:"a beaver",
+    choice3:"a lion",
+    choice4:"a bulldog",
+    correctChoice: "a penguin")
 
 let question11 = spappQuestion(
     question: "How many teachers teach at Spence?",
@@ -134,19 +134,19 @@ let question15 = spappQuestion(
 
 let question16 = spappQuestion(
     question:"Which of these awards were given to students?",
-    choice1:"Spoon medal for table manners",
+    choice1:"Medal for table manners",
     choice2:"Posture Captain for good posture",
     choice3:"Honor pin for punctuality and superior character",
     choice4:"All of the above",
     correctChoice: "All of the above")
 
-let question17 = spappQuestion(
-    question: "The 91st street land used to be Ms. Carnegie's:",
-    choice1:"back lawn",
-    choice2:"tennis court",
-    choice3:"garden",
-    choice4:"swimming pool",
-    correctChoice: "tennis court")
+//let question17 = spappQuestion(
+//    question: "The 91st street land used to be Ms. Carnegie's:",
+//    choice1:"back lawn",
+//    choice2:"tennis court",
+//    choice3:"garden",
+//    choice4:"swimming pool",
+//    correctChoice: "tennis court")
 
 let question18 = spappQuestion(
     question: "How many items does the Library have?",
@@ -178,14 +178,14 @@ let question21 = spappQuestion(
     choice1:"Penmanship",
     choice2:"Embroidery",
     choice3:"Cheerleading",
-    choice4:"Home Accounting",
+    choice4:"All of the above",
     correctChoice: "All of the above")
 
 let question22 = spappQuestion(
     question: "How was Clara Spence ahead of her time?",
-    choice1:"She had a University Degree",
-    choice2:"She raised a family with her life partner Charlotte Baker",
-    choice3:"She helped support her immediate family",
+    choice1:"She graduated from university",
+    choice2:"She raised and supported a family with her life partner Charlotte Baker",
+    choice3:"She her own school",
     choice4:"All of the above",
     correctChoice: "All of the above")
 
@@ -198,20 +198,20 @@ let question22 = spappQuestion(
     //correctChoice: "14")
 
 let question24 = spappQuestion(
-    question:"What is Bodie Brizendine's real name?",
+    question:"What is Bodie Brizendine's given name?",
     choice1: "Bodie Brizendine",
     choice2: "Elizabeth Brizendine",
     choice3: "Ellanor Brizendine",
     choice4: "Boudicea Brizendine",
     correctChoice: "Ellanor Brizendine")
 
-let question25 = spappQuestion(
-    question: "What does RSTU stand for?",
-    choice1: "Reading, Studying, Tutoring Unit",
-    choice2: "Those are the period names",
-    choice3: "The letters do not mean anything",
-    choice4: "The letters represent the 18th, 19th, 20th, and 21st letters of the alphabet",
-    correctChoice: "Those are the period names")
+//let question25 = spappQuestion(
+//    question: "What does RSTU stand for?",
+//    choice1: "Reading, Studying, Tutoring Unit",
+//    choice2: "Those are the period names",
+//    choice3: "The letters do not mean anything",
+//    choice4: "The letters represent the 18th, 19th, 20th, and 21st letters of the alphabet",
+//    correctChoice: "Those are the period names")
 
 let question26 = spappQuestion(
     question: "How many middle and upper school math teachers are there?",
@@ -317,13 +317,13 @@ let question38 = spappQuestion(
     choice4:"None of the above",
     correctChoice: "Blue and Yellow")
 
-//let question39 = spappQuestion(
-  //  question: "What is the address of the Spence lower school",
-   // choice1:"56 East 93rd Street",
-   // choice2:"52 East 94th Street",
-   // choice3:"22 East 91st Street",
-   // choice4:"None of the above",
-   // correctChoice: "56 East 93rd Street")
+let question39 = spappQuestion(
+    question: "What is the address of the Spence lower school?",
+    choice1:"56 East 93rd Street",
+    choice2:"52 East 94th Street",
+    choice3:"22 East 91st Street",
+    choice4:"None of the above",
+    correctChoice: "56 East 93rd Street")
 
 let question40 = spappQuestion(
     question: "When was Spence founded?",
@@ -334,13 +334,13 @@ let question40 = spappQuestion(
     correctChoice: "1892")
 
 
-//let question41 = spappQuestion(
- //   question: "What grade is nail polish allowed?",
-  //  choice1:"5th",
-  //  choice2:"8th",
-   // choice3:"9th",
-   // choice4:"12th",
-   // correctChoice: "5th")
+let question41 = spappQuestion(
+    question: "What grade is nail polish allowed?",
+    choice1:"5th",
+    choice2:"8th",
+    choice3:"9th",
+    choice4:"12th",
+    correctChoice: "5th")
 
 //et question43 = spappQuestion(
   //  question: "Which grade has the most students?",
@@ -356,7 +356,7 @@ let question44 = spappQuestion(
     choice2:"",
     choice3:"",
     choice4: "",
-    correctChoice: "claraspence")
+    correctChoice: "clara spence")
 
 //let question45 = spappQuestion(
   //  question: "Where is the door on the school logo? ",
@@ -370,8 +370,8 @@ let question44 = spappQuestion(
 
 var levelOneQuestions: [spappQuestion] = [question24, question18, question27, question11, question38, question8, question19, question29, question14, question32, question4]
 
-var levelTwoQuestions: [spappQuestion] = [question37, question21, question25, question26, question28,  question9, question10, question30]
+var levelTwoQuestions: [spappQuestion] = [question37, question21, question26, question28,  question9, question10, question30]
 
-var levelThreeQuestions: [spappQuestion] = [question6, question7, question12, question13, question40, question22, question15, question17, question16, question31, question5, question20, question2, question44]
+var levelThreeQuestions: [spappQuestion] = [question6, question7, question12, question13, question40, question22, question15, question16, question31, question5, question20, question2, question44]
 
 //var levelOneQuestions = []
