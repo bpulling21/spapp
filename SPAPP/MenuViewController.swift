@@ -39,17 +39,20 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "segue_to_level_one"{
-            let destination = segue.destination as! QuizViewController
-            destination.passedQuestionArray = levelOneQuestions
+            let destination = segue.destination as! UINavigationController
+            let target = destination.topViewController as! QuizViewController
+            target.passedQuestionArray = levelOneQuestions
         }
         if segue.identifier == "segue_to_level_two"{
-            let destination = segue.destination as! QuizViewController
-            destination.passedQuestionArray = levelTwoQuestions
+            let destination = segue.destination as! UINavigationController
+            let target = destination.topViewController as! QuizViewController
+            target.passedQuestionArray = levelTwoQuestions
         }
    
         if segue.identifier == "segue_to_level_three"{
-            let destination = segue.destination as! QuizViewController
-            destination.passedQuestionArray = levelThreeQuestions
+            let destination = segue.destination as! UINavigationController
+            let target = destination.topViewController as! QuizViewController
+            target.passedQuestionArray = levelThreeQuestions
     }
    
 

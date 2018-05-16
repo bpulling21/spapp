@@ -86,6 +86,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         dismiss(animated: false, completion: nil)
     }
 
+   
     func displayQuestion () {
         tableviewArray = []
         self.quizQuestion = giveRandomQuestion()
@@ -123,9 +124,12 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableviewArray.append((quizQuestion?.choice3)!)
         tableviewArray.append((quizQuestion?.choice4)!)
     }
-
+    
+@IBAction func cancelButtonTapped(_ sender: Any) {
+        navigationController?.dismiss(animated: true, completion:nil)
+    }
+    
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-
          let trimmedString = enterNameField.text?.trimmingCharacters(in: .whitespaces)
             
     if trimmedString?.lowercased() == question44.correctChoice {

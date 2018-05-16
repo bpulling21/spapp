@@ -185,7 +185,7 @@ let question22 = spappQuestion(
     question: "How was Clara Spence ahead of her time?",
     choice1:"She graduated from university",
     choice2:"She raised and supported a family with her life partner Charlotte Baker",
-    choice3:"She her own school",
+    choice3:"She taught at her own school",
     choice4:"All of the above",
     correctChoice: "All of the above")
 
