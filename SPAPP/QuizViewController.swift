@@ -42,6 +42,9 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //tableView.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
@@ -68,11 +71,21 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 customTitle = "Nooo! Better luck next time!"
             } else if numCorrectAnswers == totalNumQuestions {
                 customTitle = "Perfect!"
-                
+            } else if numCorrectAnswers == totalNumQuestions - 1 {
+                customTitle = "So close! Try again =)"
+            } else if numCorrectAnswers == totalNumQuestions - 2 {
+                customTitle = "Almost there! Try again to get it perfect!"
+            } else if numCorrectAnswers == totalNumQuestions - 3 {
+                customTitle = "Halfway there! Try again to get it perfect!"
+            } else if numCorrectAnswers == 2 {
+                customTitle = "Nice try, better luck next time!"
+            } else if numCorrectAnswers == 1 {
+                customTitle = "Try your best, and you will do better next time!"
             } else {
                 customTitle = "You finished this level"
             }
             
+                
             
             let alertController = UIAlertController(title: customTitle, message: "You got \(numCorrectAnswers) out of \(totalNumQuestions) right!", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: goBackToMenu)
@@ -177,13 +190,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if selectedChoice == self.quizQuestion?.correctChoice{
             print("Great Choice. You got it right!")
             numCorrectAnswers += 1
-            let alertController = UIAlertController(title: "Good Choice", message: "Awesome!", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "You got it!", message: "Great Job", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         } else {
             print("Oops! You got it wrong!")
-            let alertController = UIAlertController(title: "Bad Choice", message: "You got it wrong :(", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "Oops!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
