@@ -10,13 +10,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SPAPP/QuizViewController.swift"
-            timestampString = "540055003.368162"
+            timestampString = "550855639.4868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPAPP/QuizViewController.swift"
+            timestampString = "550855639.48728"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPAPP/QuizViewController.swift"
+            timestampString = "550855639.487586"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "QuizViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SPAPP.QuizViewController.tableviewArray.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "SPAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SkylerPulling/Desktop/All/All%20Code/XCode/spapp/SPAPP/QuizViewController.swift"
+                  timestampString = "550853773.660004"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SPAPP.QuizViewController.tableviewArray.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "SPAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SkylerPulling/Desktop/All/All%20Code/XCode/spapp/SPAPP/QuizViewController.swift"
+                  timestampString = "550853773.662825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SPAPP.QuizViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SPAPP.QuizViewController"
+                  moduleName = "SPAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SkylerPulling/Desktop/All/All%20Code/XCode/spapp/SPAPP/QuizViewController.swift"
+                  timestampString = "550853773.665751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1593">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SPAPP.QuizViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SPAPP.QuizViewController&gt;"
+                  moduleName = "SPAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SkylerPulling/Desktop/All/All%20Code/XCode/spapp/SPAPP/QuizViewController.swift"
+                  timestampString = "550853773.668628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1482">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPAPP/QuizViewController.swift"
+            timestampString = "550855639.487872"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

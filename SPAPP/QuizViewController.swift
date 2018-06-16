@@ -23,6 +23,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var tableViewYConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var tryAgainMessage: UILabel!
     var selectedRandomInteger:Int = 0
     var roundQuestionArray:Array<spappQuestion> = []
     var tableviewArray:Array<String> = []
@@ -32,6 +33,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var i = 5
     var numCorrectAnswers:Int = 0
     var totalNumQuestions = 6
+    var tries = 0
     
 
         
@@ -42,6 +44,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //tableView.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        tryAgainMessage.isHidden = true
 //        navigationController?.navigationBar.isTranslucent = false
 //        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 //        navigationController?.navigationBar.shadowImage = UIImage()
@@ -61,6 +64,8 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func nextQuestion( alert: UIAlertAction!) {
+        tryAgainMessage.isHidden = true
+        tries = 0
         if i > 0 {
             i -= 1
             displayQuestion()
@@ -68,7 +73,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             var customTitle = ""
             if numCorrectAnswers == 0 {
-                customTitle = "Nooo! Better luck next time!"
+                customTitle = "No! Better luck next time!"
             } else if numCorrectAnswers == totalNumQuestions {
                 customTitle = "Perfect!"
             } else if numCorrectAnswers == totalNumQuestions - 1 {
@@ -196,10 +201,31 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             present(alertController, animated: true, completion: nil)
         } else {
             print("Oops! You got it wrong!")
-            let alertController = UIAlertController(title: "Oops!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nextQuestion)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+            tries += 1
+            self.tryAgainMessage.alpha = 1.0
+            tryAgainMessage.isHidden = false
+            UIView.animate(withDuration: 3.0,
+                              animations: { self.tryAgainMessage.alpha = 0.0 })
+            
+            if tries > 2 {
+                let correctIndex = tableviewArray.index(of: (self.quizQuestion?.correctChoice)!)
+                
+                let indexPath = IndexPath(item: correctIndex!, section: 0)
+                
+                let cell = tableView.cellForRow(at: indexPath)
+                
+                cell?.backgroundColor = UIColor.green
+                
+                //Similar to what we will do.
+                //UIView.animate(withDuration: 3.0,
+                               animations: { self.tryAgainMessage.alpha = 0.0 })
+                
+                //let alertController = UIAlertController(title: "Oops!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
+                //let okAction = UIAlertAction(title: "Ok", style: .default, handler:  )
+                //alertController.addAction(okAction)
+                //present(alertController, animated: true, completion: nil)
+                
+            }        
         }
     }
 
