@@ -12,6 +12,7 @@ class AnswerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var backgroundAnswerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

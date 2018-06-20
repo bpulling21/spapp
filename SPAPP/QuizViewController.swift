@@ -204,31 +204,36 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tries += 1
             self.tryAgainMessage.alpha = 1.0
             tryAgainMessage.isHidden = false
-            UIView.animate(withDuration: 3.0,
+            UIView.animate(withDuration: 1.0,
                               animations: { self.tryAgainMessage.alpha = 0.0 })
-            
             if tries > 2 {
-                let correctIndex = tableviewArray.index(of: (self.quizQuestion?.correctChoice)!)
                 
+                let correctIndex = tableviewArray.index(of: (self.quizQuestion?.correctChoice)!)
                 let indexPath = IndexPath(item: correctIndex!, section: 0)
                 
-                let cell = tableView.cellForRow(at: indexPath)
+                let cell = tableView.cellForRow(at: indexPath) as! AnswerTableViewCell
                 
-                cell?.backgroundColor = UIColor.green
+                cell.backgroundAnswerView.layer.backgroundColor = UIColor.green.cgColor
                 
-                //Similar to what we will do.
-                //UIView.animate(withDuration: 3.0,
-                               animations: { self.tryAgainMessage.alpha = 0.0 })
                 
-                //let alertController = UIAlertController(title: "Oops!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
-                //let okAction = UIAlertAction(title: "Ok", style: .default, handler:  )
-                //alertController.addAction(okAction)
-                //present(alertController, animated: true, completion: nil)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.75, execute: {
+                    self.nextQuestionAlert()
+                })
                 
             }        
         }
     }
-
+    
+    func nextQuestionAlert() {
+        let alertController = UIAlertController(title: "You got 3 wrong!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler:nextQuestion )
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
