@@ -45,7 +45,7 @@ let question4 = spappQuestion(
 
 let question5 = spappQuestion(
     question: "During the Great Depression, what did the Spence School do to stay open?",
-    choice1:"Merge with Chandor School",
+    choice1:"Merge with the Chandor School",
     choice2:"Accept boys to increase revenues",
     choice3:"Remove the boarding facilities to curtail expenses",
     choice4:"None of the above",

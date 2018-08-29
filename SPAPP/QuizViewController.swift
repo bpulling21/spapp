@@ -62,7 +62,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         roundQuestionArray.remove(at: randomInt)
         return currentQuestion
     }
-
+//i = number of questions per round
     func nextQuestion( alert: UIAlertAction!) {
         tryAgainMessage.isHidden = true
         tries = 0
@@ -177,6 +177,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as! AnswerTableViewCell
+        cell.backgroundAnswerView.layer.backgroundColor = UIColor.white.cgColor
         cell.backgroundAnswerView.layer.cornerRadius = 15
         cell.answerLabel.text = tableviewArray[indexPath.row]
         cell.backgroundAnswerView.layer.borderWidth = 4
@@ -203,10 +204,11 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("Oops! You got it wrong!")
             tries += 1
             self.tryAgainMessage.alpha = 1.0
+//            alpha= transparency, alpha 1= fully there
             tryAgainMessage.isHidden = false
             UIView.animate(withDuration: 1.0,
                               animations: { self.tryAgainMessage.alpha = 0.0 })
-            if tries > 2 {
+            if tries > 1   {
                 
                 let correctIndex = tableviewArray.index(of: (self.quizQuestion?.correctChoice)!)
                 let indexPath = IndexPath(item: correctIndex!, section: 0)
@@ -219,6 +221,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.75, execute: {
                     self.nextQuestionAlert()
+                    //put breakpoint on 213, remove 205 breakpoint, stepover to see if the correct index is nil, why is this happening? examine table view array, print out tableview arry to see if that value is nil. printout self.quizquestion.correctchoice to see if correct index is nil. 
                 })
                 
             }        
@@ -226,7 +229,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func nextQuestionAlert() {
-        let alertController = UIAlertController(title: "You got 3 wrong!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Let's try the next question", message: "Good luck!", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler:nextQuestion )
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
