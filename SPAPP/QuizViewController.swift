@@ -34,9 +34,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var numCorrectAnswers:Int = 0
     var totalNumQuestions = 6
     var tries = 0
-    
-
-        
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         roundQuestionArray = passedQuestionArray
@@ -57,7 +55,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func giveRandomQuestion()-> spappQuestion {
         let randomInt = GKRandomSource.sharedRandom().nextInt(upperBound:roundQuestionArray.count)
-        roundQuestionArray.count
+//        roundQuestionArray.count
         let currentQuestion = roundQuestionArray[randomInt]
         roundQuestionArray.remove(at: randomInt)
         return currentQuestion
@@ -70,6 +68,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             i -= 1
             displayQuestion()
             tableView.reloadData()
+        
         } else {
             var customTitle = ""
             if numCorrectAnswers == 0 {
@@ -181,11 +180,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.answerLabel.text = tableviewArray[indexPath.row]
         cell.backgroundAnswerView.layer.borderWidth = 4
         cell.backgroundAnswerView.layer.borderColor = UIColor(red: 0, green: 0, blue: 256, alpha: 1).cgColor
-        
-        
-//        cell.textLabel?.text = tableviewArray[indexPath.row]
-//        cell.textLabel?.font = cell.textLabel?.font.withSize(13)
-//        index path assigns integer values counting from zero to each row
+        cell.backgroundAnswerView.layer.backgroundColor = UIColor.white.cgColor
         return cell
     }
 
@@ -206,7 +201,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tryAgainMessage.isHidden = false
             UIView.animate(withDuration: 1.0,
                               animations: { self.tryAgainMessage.alpha = 0.0 })
-            if tries > 2 {
+            if tries > 1 {
                 
                 let correctIndex = tableviewArray.index(of: (self.quizQuestion?.correctChoice)!)
                 let indexPath = IndexPath(item: correctIndex!, section: 0)
@@ -226,7 +221,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func nextQuestionAlert() {
-        let alertController = UIAlertController(title: "You got 3 wrong!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "You answered wrong two times- too bad!", message: "Go to the next question", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler:nextQuestion )
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)

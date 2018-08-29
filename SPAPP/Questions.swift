@@ -45,7 +45,7 @@ let question4 = spappQuestion(
 
 let question5 = spappQuestion(
     question: "During the Great Depression, what did the Spence School do to stay open?",
-    choice1:"Merge with Chandor School",
+    choice1:"Merge with the Chandor School",
     choice2:"Accept boys to increase revenues",
     choice3:"Remove the boarding facilities to curtail expenses",
     choice4:"None of the above",
@@ -125,7 +125,7 @@ let question14 = spappQuestion(
     correctChoice: "Math")
 
 let question15 = spappQuestion(
-    question: "Which statement is untrue?",
+    question: "Which statement is false?",
     choice1:"Spence used to be a co-ed school",
     choice2:"Boys attended Spence School only if they were younger siblings",
     choice3:"Boys never attended the Spence School",
@@ -327,7 +327,7 @@ let question40 = spappQuestion(
 
 
 let question41 = spappQuestion(
-    question: "In what grade are students allowed to wear nail polish?",
+    question: "In which grade are students allowed to wear nail polish?",
     choice1:"5th",
     choice2:"8th",
     choice3:"9th",
